@@ -1,20 +1,15 @@
 //handles to various parts of the screen. Initialized in myInitialize()
-var LoginResults, RemoteErr, RemoteTable, KeyMessage;
+var RemoteMessage, RemoteTable, KeyMessage;
 var DisplaySymbols;
 var HotKeys= [];
 
 function copy_properties (d,s) {for(x in s)d[x]=s[x];}
-function myDisplayErr(handle,s,err) {
-	handle.innerHTML= "<span class='error'>Error during "+s+err.code
-					+" '"+err.message+"'</span>";
-}
 
 function myInitialize() {
 	window.resizeTo(550,800);
 	window.moveTo(0, 0)
 
-	LoginResults=document.getElementById("LoginResults");
-	RemoteErr=document.getElementById ("RemoteErr");
+	RemoteMessage=document.getElementById ("RemoteMessage");
 	RemoteTable=document.getElementById("RemoteTable");
 	KeyMessage=document.getElementById("KeyMessage");
 	CommandQueue=document.getElementById("CommandQueue");
@@ -39,8 +34,8 @@ var x,r,c,s;
 			,HotKeys[x][0],HotKeys[x][1]);
 	 else
 		KeyMessage.innerHTML=t;
-		//RemoteErr.innerHTML= "";
-	RemoteErr.innerText= "Keypress handled"; 
+		//RemoteMessage.innerHTML= "";
+	RemoteMessage.innerText= "Keypress handled"; 
 }
 
 function TranslateSpecial(x) {
@@ -54,7 +49,7 @@ function TranslateSpecial(x) {
 		case 219:s="["; break; case 221:s="]"; break;
 		case 188:s=","; break; case 190:s="."; break;
 		case 191:s="/"; break; case 120:s="|"; break;
-		case 20:s="ESC"; break;
+		case 20:s="ESC"; break; case 220:s="\\"; break;
 		default:s= String.fromCharCode(x);
 	}
 	return s;
@@ -97,13 +92,13 @@ function SendButton (t,r,c) {
 	var B= Button[r][c];
 	KeyMessage.innerHTML=t+" button("+r+","+c+")";
 	if(B[0]==0) return;
-	RemoteErr.innerText= "Attempting sending..."; 
+	RemoteMessage.innerText= "Attempting sending..."; 
 	
 	DoRest(IP_Address+"/rest/"+B[0]+"/"+B[1]+"/"+B[2]+"/",
 		function (Response) {
                         //console.log(Response);
-			//RemoteErr.innerText=JSON.stringify(Response);
-			RemoteErr.innerText=Response;
+			//RemoteMessage.innerText=JSON.stringify(Response);
+			RemoteMessage.innerText=Response;
 		}
 	)
 }

@@ -14,7 +14,7 @@ var Button= [//object containing all buttons
 	[//row 1
 		[7,0xe0e0d02f,0, "V-",189],
 		[5,0x36b129,0, "&#9658;&#9658;|",78],//live "N"
-		[5,0x375914,0, "<span class='Red Big'>&#9679;</span>",82],//record "R"
+		[5,0x375914,0, "<span class='error Big'>&#9679;</span>",82],//record "R"
 		[5,0x374117,0, "||",80],
 		[5,0x365934,0, "<span class='Big'>&#9632;</span>",83],//Stop
 		[5,0x37910d,0, "4",52],
@@ -23,9 +23,9 @@ var Button= [//object containing all buttons
 	],
 	[//row 2
 		[7,0xe0e0f00f,0, "Mute",81],
-		[5,0x36c127,0, "<span class='Narrow'>Guide</span>",71],
+		[5,0x36c127,0, "Guide",71],
 		[5,0x37d904,0, "PgDn", 34],
-		[5,0x36812f,0, "<span class='Big'>&#8657;</span>",38],//up arrow
+		[5,0x36812f,0, "<span class=' Big'>&#8657;</span>",38],//up arrow
 		[5,0x36d924,0, "PgUp",33],
 		[5,0x36d125,0, "7",55],
 		[5,0x37d105,0, "8",56],
@@ -34,12 +34,12 @@ var Button= [//object containing all buttons
 	[//row 3
 		[5,0x377111,0, "Ch+",85],
 		[5,0x366932,0, "Exit",88],
-		[5,0x37810f,0, "<span class='Big'>&#8656;</span>", 37],//left arrow
+		[5,0x37810f,0, "<span class=' Big'>&#8656;</span>", 37],//left arrow
 		[5,0x366133,0, "OK",13],
-		[5,0x364137,0, "<span class='Big'>&#8658;</span>",39],//right arrow
+		[5,0x364137,0, "<span class=' Big'>&#8658;</span>",39],//right arrow
 		[5,0x36213b,0, "Info",73],
 		[5,0x373119,0, "0",48],
-		[5,0x36b928,0, "Zm",90]
+		[5,0x36b928,0, "Zoom",90]
 	],
 	[//row 4
 		[5,0x36f121,0, "Ch-",68],
@@ -64,7 +64,7 @@ var Button= [//object containing all buttons
 	[//row 6
 		[5,0x0e163d,0, "Day-",219],
 		[5,0x0fe603,0, "Day+",221],
-		[7,0xe0e0807f,0, "Inp",75]
+		[7,0xe0e0807f,0, "Input",75]
 	]
 /*
 	[//row 

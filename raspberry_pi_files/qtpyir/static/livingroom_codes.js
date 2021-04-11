@@ -1,20 +1,20 @@
-var IP_Address="http://192.168.1.110"; //IP address of Raspberry Pi
-var PageTitle="QtPy Cable Remote Demo";
+var IP_Address="http://192.168.1.135"; //IP address of Raspberry Pi
+var PageTitle="QtPy Living Room Remote";
 var Button= [//object containing all buttons
 	[//object containing row 0
-		[7,0xe0e0e01f,0, "V+",187],//Object containing button 1
+		[1,0xc73832cd,0, "V+",187],//Object containing button 1
 		[5,0x37c906,0, "|&#9668;&#9668;",74],//jump back "J"
-		[5,0x37291a,0, "&#9668;&#9668;",36],//rewind
+		[5,0x37291a,0, "&#9668;&#9668;",72],//rewind
 		[5,0x37990c,0, "&#9658;",32],//play
-		[5,0x36293a,0, "&#9658;&#9658;",35],//fast-forward
+		[5,0x36293a,0, "&#9658;&#9658;",69],//fast-forward
 		[5,0x36113d,0, "1",49],
 		[5,0x37111d,0, "2",50],
 		[5,0x36912d,0, "3",51]
 	],
 	[//row 1
-		[7,0xe0e0d02f,0, "V-",189],
+		[1,0xc7382ad5,0, "V-",189],
 		[5,0x36b129,0, "&#9658;&#9658;|",78],//live "N"
-		[5,0x375914,0, "<span class='Red Big'>&#9679;</span>",82],//record "R"
+		[5,0x375914,0, "<span class='error Big'>&#9679;</span>",82],//record "R"
 		[5,0x374117,0, "||",80],
 		[5,0x365934,0, "<span class='Big'>&#9632;</span>",83],//Stop
 		[5,0x37910d,0, "4",52],
@@ -22,10 +22,10 @@ var Button= [//object containing all buttons
 		[5,0x375115,0, "6",54]
 	],
 	[//row 2
-		[7,0xe0e0f00f,0, "Mute",81],
-		[5,0x36c127,0, "<span class='Narrow'>Guide</span>",71],
+		[1,0xc7386a95,0, "Mute",81],
+		[5,0x36c127,0, "Guide",71],
 		[5,0x37d904,0, "PgDn", 34],
-		[5,0x36812f,0, "<span class='Big'>&#8657;</span>",38],//up arrow
+		[5,0x36812f,0, "<span class=' Big'>&#8657;</span>",38],//up arrow
 		[5,0x36d924,0, "PgUp",33],
 		[5,0x36d125,0, "7",55],
 		[5,0x37d105,0, "8",56],
@@ -34,14 +34,14 @@ var Button= [//object containing all buttons
 	[//row 3
 		[5,0x377111,0, "Ch+",85],
 		[5,0x366932,0, "Exit",88],
-		[5,0x37810f,0, "<span class='Big'>&#8656;</span>", 37],//left arrow
+		[5,0x37810f,0, "<span class=' Big'>&#8656;</span>", 37],//left arrow
 		[5,0x366133,0, "OK",13],
-		[5,0x364137,0, "<span class='Big'>&#8658;</span>",39],//right arrow
+		[5,0x364137,0, "<span class=' Big'>&#8658;</span>",39],//right arrow
 		[5,0x36213b,0, "Info",73],
 		[5,0x373119,0, "0",48],
-		[5,0x36b928,0, "Zm",90]
+		[5,0x36b928,0, "Zoom",90]
 	],
-	[//row 4
+	[//row 4I
 		[5,0x36f121,0, "Ch-",68],
 		[5,0x36e123,0, "Prev",86],
 		[5,0x373918,0, "Menu",77],
@@ -59,12 +59,13 @@ var Button= [//object containing all buttons
 		[5,0x36e922,0, "PIP+",190],
 		[5,0x37f101,0, "Fav",70],
 		[5,0x37c107,0, "Cbl<br>Pwr",0],
-		[7,0x0e0e040bf,0, "TV<br>Pwr",0]
+		[1,0x0c73840bf,0, "TV<br>Pwr",0]
 	],
 	[//row 6
+    [99,0x37c107,11, "Reset",0],
+    [99,0x36293a,4, "S&#9658;&#9658;",0],//super fast-forward
 		[5,0x0e163d,0, "Day-",219],
-		[5,0x0fe603,0, "Day+",221],
-		[7,0xe0e0807f,0, "Inp",75]
+		[5,0x0fe603,0, "Day+",221]
 	]
 /*
 	[//row 
