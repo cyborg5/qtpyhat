@@ -110,9 +110,7 @@ void loop() {
   } 
   else if (myReceiver.getResults()) {
     myDecoder.decode();
-    if(recvGlobal.decodeLength > 10) {
-      storeCode();
-    }
+    storeCode();
     myReceiver.enableIRIn(); // Re-enable receiver
   }
 }
